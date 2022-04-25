@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link to bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!--Link to my css-->
+    <link rel="stylesheet" href="myStyle.css" type="text/css">
+    <!--Link to google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah">
+    <!--Link to font awesome for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>My Cart</title>
+</head>
+
+<body onload="cartLoad()">
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid">
+
+            <!--Logo-->
+            <a href="index.html"><img class="rounded-circle"
+                    src="https://st2.depositphotos.com/3682225/5472/v/600/depositphotos_54720709-stock-illustration-macadamia-nuts-white-background-natural.jpg"
+                    alt="mac logo" height="50" width="60"></a>
+            <p id="niassa" class="pt-2 mr-auto">Niassa Nut Co.</p>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="myCart.html"><i id="mainCart"
+                                class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li id="pendingTotal" class="nav-item">
+                        <p class="nav-link"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--My Cart-->
+
+    <div class="container-fluid pt-5">
+        <div id="cartShow" class="row">
+            <div id="col1" class="col-lg-4">
+                <hr>
+                <h4 class="shopItem text-center">ORDER SUMMARY</h4>
+                <hr>
+                <div class="orderBox">
+                    <p>Subtotal</p>
+                    <p id="orderSubTotal"></p>
+                </div>
+                <div class="orderBox">
+                    <p>Delivery</p>
+                    <p id="deliveryCost"></p>
+                </div>
+                <div class="orderBox">
+                    <p>VAT 15%</p>
+                    <p id="vat"></p>
+                </div>
+                <div id="couponDiv" class="orderBox">
+                    <p id="couponP">Coupon Discount</p>
+                    <p id="discount"></p>
+                </div>
+                <div class="orderBox">
+                    <h5 class="font-weight-bold">Total</h5>
+                    <h5 class="font-weight-bold" id="total"></h5>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <button id="confirmOrder" class="btn btn-primary">Continue to payment</button>
+                </div>
+                <br><br><br>
+                <div id="couponInputDiv" class="col">
+                    <hr>
+                    <h4 class="shopItem text-center">DO YOU WANT TO ADD A COUPON?</h4>
+                    <hr>
+                    <input type="text" id="couponInput" class="form-control delivery"
+                        placeholder="Enter Valid Coupon Code Here">
+                    <p id="couponWarn" class="text-center"></p>
+                    <div class="text-center pt-2">
+                        <button id="couponBtn" class="btn btn-primary">Add Coupon Discount</button>
+                    </div>
+                </div>
+            </div>
+            <div id="orderForm" class="col-lg-8">
+                <hr>
+                <h4 class="shopitem text-center">HOW WOULD YOU LIKE TO RECEIVE YOUR ORDER?</h4>
+                <hr>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input ml-2 radioButtons" id="radio1" name="optradio"
+                        value="option1">
+                    <i class="fa-solid fa-people-carry-box"></i>
+                    <label class="formHeader form-check-label ml-2" for="radio1">Collect</label>
+                    <p>Collection is free!</p>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control emailOrder" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter email" required>
+                        <small id="emailHelp" class="form-text">We will send your order confirmation here.</small>
+                        <h5 class="pt-5">How It Works</h5>
+                        <p>Simply place your order online, then pick it up at your nearest Niassa Nut Co Store.</p>
+                        <p>Don't forget to bring your order confirmation with you when you collect.</p>
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input ml-2 radioButtons" id="radio2" name="optradio"
+                        value="option2">
+                    <i class="fa-solid fa-truck"></i>
+                    <label class="formHeader form-check-label ml-2" for="radio2">Deliver</label>
+                    <p>Standard Courier charges apply.</p>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control emailOrder" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Enter email" required>
+                        <small id="emailHelp" class="form-text">We will send your order confirmation here.</small>
+                        <div class="form-group pt-4">
+                            <label for="exampleFormControl">Please fill in the form below</label>
+                        </div>
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control delivery" placeholder="First name">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control delivery" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <input type="text" class="form-control delivery" placeholder="Street Number">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control delivery" placeholder="Street Name">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <input type="text" class="form-control delivery" placeholder="City">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control delivery" placeholder="Province">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cartHide" class="row">
+
+            <!--My Cart Header-->
+            <div class="col-lg-4 col-md-4">
+                <img class="cartHeaderImg"
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/96/Macadamia_nuts_on_tree.JPG" alt="mac nuts">
+                <div class="cartHeaderText">
+                    MY CART
+                </div>
+            </div>
+
+            <!--My Cart Table-->
+            <div class="col-lg-8 col-md-8">
+                <table id="myCart" class="table table-hover table-responsive-md">
+                    <thead>
+                        <tr>
+                            <th>Remove/Edit</th>
+                            <th>Image</th>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th class="text-right">Price</th>
+                            <th class="text-right">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <!--Subtotal-->
+                <div id="subT" class="text-right">Subtotal: </div>
+                <div id="cartButtons"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--Order Confirmed-->
+    <div id="thanksDiv" class="container-fluid text-center"></div>
+
+    <!--Footer-->
+    <footer class="pt-3 mt-4">
+        <div class="container-fluid">
+            <div class="row text-center mt-3">
+                <div class="col-md-4">
+                    <img class="rounded-circle"
+                        src="https://st2.depositphotos.com/3682225/5472/v/600/depositphotos_54720709-stock-illustration-macadamia-nuts-white-background-natural.jpg"
+                        alt="mac logo" height="50" width="60">
+                    <p id="niassa" class="mr-0">Niassa Nut Co.</p>
+                    <hr>
+                    <p>011 777-7777</p>
+                    <p>niassanutco@gmail.com</p>
+                    <p>Niassa Nut Farm</p>
+                    <p>Mozambique</p>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                    <h5>Our Hours</h5>
+                    <hr>
+                    <p>Monday-Friday - 9am-5pm</p>
+                    <p>Saturdays - 9am-2pm</p>
+                    <p>Sundays - Closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                    <h5>Current Offices</h5>
+                    <hr>
+                    <p>Niassa, Mozambique</p>
+                    <p>Johannesburg, SA</p>
+                    <p>More to come...</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Include JS file-->
+    <script src="script.js" type="text/javascript"></script>
+    <!--Link to jQuery-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--Link to bootstrap bundle for navbar toggler-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link to bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!--Link to my css-->
+    <link rel="stylesheet" href="myStyle.css" type="text/css">
+    <!--Link to google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah">
+    <!--Link to font awesome for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Niassa Nut Co.</title>
+</head>
+
+<body>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-md sticky-top">
+        <div class="container-fluid">
+
+            <!--Logo-->
+            <a href="index.html"><img class="rounded-circle"
+                    src="https://st2.depositphotos.com/3682225/5472/v/600/depositphotos_54720709-stock-illustration-macadamia-nuts-white-background-natural.jpg"
+                    alt="mac logo" height="50" width="60"></a>
+            <p id="niassa" class="pt-2 mr-auto">Niassa Nut Co.</p>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="myCart.html"><i id="mainCart"
+                                class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" id="pendingTotal"></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <div class="container-fluid px-0 headerDiv">
+        <img id="headerImg" class="img-fluid"
+            src="https://cdn.shopify.com/s/files/1/1607/6973/articles/herbal-dynamics-beauty-benefits-macadamia-oil_2048x.progressive.jpg?v=1591055605"
+            alt="macadamias">
+        <div class="headerText">
+            Welcome to Niassa Nut Co.
+        </div>
+        <div class="headerP">
+            We are the largest Macadamia Farm in the Southern Hemisphere.
+        </div>
+    </div>
+    <br>
+
+    <!--Carousel-->
+    <div id="slides" class="carousel slide mt-5" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#slides" data-slide-to="0" class="active"></li>
+            <li data-target="#slides" data-slide-to="1"></li>
+            <li data-target="#slides" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+                <p>"You can taste the quality."</p>
+                <p class="pl-5">~Greg</p>
+            </div>
+            <div class="carousel-item">
+                <p>"My health has improved overall since discovering Niassa Nut Co's products"</p>
+                <p class="pl-5">~Brent</p>
+            </div>
+            <div class="carousel-item">
+                <p>"I couldn't be happier about the product and the service I have received!"</p>
+                <p class="pl-5">~Hannah</p>
+            </div>
+        </div>
+    </div>
+
+    <!--Why Macadamia Nuts?-->
+    <div class="container-fluid whyMacs">
+        <div class="row">
+            <div class="col-lg text-center pt-5">
+                <h2>WHY MACADAMIA NUTS?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mx-auto pt-4">
+                <p>
+                    Macadamia Nuts are one of the healthiest food items we can eat! They are packed with so many
+                    vitamins, minerals, healthy fats and oils, anti-oxidants, proteins, and more. The list goes on and
+                    on!
+                    Scientists are only just discovering the health benefits, but here at Niassa Nut Co, we are ahead of
+                    the curve.
+                </p>
+                <br>
+                <p>
+                    These little nutrient-filled nuts are proven to help prevent heart disease and cancer, they're also
+                    good for
+                    your gut, and they even aid in weight loss. Here at the Niassa Factory, we have been exploring all
+                    the delicious ways
+                    in which we can make use of the macadamia nut. We have created the most mouth-watering, good-for-you
+                    products around.
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr><br>
+
+    <!--About Us-->
+    <div class="container-fluid aboutUs mt-3 mb-2">
+        <div class="row">
+            <div class="col-lg text-center">
+                <h2>ABOUT US</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg pt-5">
+                <p>
+                    We are a family run business based in the beautiful province of Niassa in Mozambique.
+                    We have planted and nurtured over 1500 hectares of Macadamia Nut Trees over the years,
+                    currently producing over 5000 tons of Nut-In-Shell per year.
+                    We supply to all industries - large and small! We are able to accomodate orders of Nut-In-Shell
+                    in container loads for export, as well as smaller orders for local supply.
+                    We also manufacture our very own range of products using our Macs.
+                </p>
+            </div>
+            <div class="col-lg pt-5">
+                <img class="img-fluid"
+                    src="https://farmbuy.com/_files/macadamia-farms-for-sale/28604-bruce-highway-doolbi-qld-4660-245215.jpg"
+                    alt="macadamias">
+            </div>
+        </div>
+    </div>
+    <br>
+    <hr><br>
+
+    <!--Meet the team-->
+    <div class="container-fluid mt-2">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h2>MEET THE TEAM</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-2">
+        <div class="row text-center">
+            <div class="col-md-4 p-5">
+                <div class="card">
+                    <img class="card-imd-top" src="https://freesvg.org/img/Male-Avatar.png" alt="man avatar">
+                    <h4 class="card-title">Corne</h4>
+                    <p class="meetText">Corne is the owner and founder of Niassa Nut Co.</p>
+                </div>
+            </div>
+            <div class="col-md-4 p-5">
+                <div class="card">
+                    <img class="card-imd-top"
+                        src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/4_avatar-512.png">
+                    <h4 class="card-title">Robyn</h4>
+                    <p class="meetText">Robyn is in charge of business operations.</p>
+                </div>
+            </div>
+            <div class="col-md-4 p-5">
+                <div class="card">
+                    <img class="card-imd-top"
+                        src="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/11_avatar-512.png"
+                        alt="female avatar">
+                    <h4 class="card-title">Kerry</h4>
+                    <p class="meetText">Kerry is in charge of marketing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="pt-3 mt-4">
+        <div class="container-fluid">
+            <div class="row text-center mt-3">
+                <div class="col-md-4">
+                    <img class="rounded-circle"
+                        src="https://st2.depositphotos.com/3682225/5472/v/600/depositphotos_54720709-stock-illustration-macadamia-nuts-white-background-natural.jpg"
+                        alt="mac logo" height="50" width="60">
+                    <p id="niassa" class="mr-0">Niassa Nut Co.</p>
+                    <hr>
+                    <p>011 777-7777</p>
+                    <p>niassanutco@gmail.com</p>
+                    <p>Niassa Nut Farm</p>
+                    <p>Mozambique</p>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                    <h5>Our Hours</h5>
+                    <hr>
+                    <p>Monday-Friday - 9am-5pm</p>
+                    <p>Saturdays - 9am-2pm</p>
+                    <p>Sundays - Closed</p>
+                </div>
+                <div class="col-md-4">
+                    <hr>
+                    <h5>Current Offices</h5>
+                    <hr>
+                    <p>Niassa, Mozambique</p>
+                    <p>Johannesburg, SA</p>
+                    <p>More to come...</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Include JS file-->
+    <script src="script.js" type="text/javascript"></script>
+    <!--Link to jQuery-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--Link to bootstrap bundle for navbar toggler-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
